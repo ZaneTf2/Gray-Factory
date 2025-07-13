@@ -1,8 +1,0 @@
-{
-    "name": "vdf-format",
-    "main": "./src/index.ts",
-    "devDependencies": {
-        "tsconfig": "workspace:^",
-        "vdf": "workspace:^"
-    }
-}

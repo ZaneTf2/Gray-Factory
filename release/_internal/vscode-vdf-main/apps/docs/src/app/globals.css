@@ -1,7 +1,0 @@
-/* @tailwind base; */
-@tailwind components;
-@tailwind utilities;
-
-:root {
-	--x-color-black: rgb(31, 31, 31);
-}

@@ -1,5 +1,0 @@
-packages:
-  - 'apps/*'
-  - 'apps/extension/browser/*'
-  - 'apps/extension/desktop/*'
-  - 'packages/*'
