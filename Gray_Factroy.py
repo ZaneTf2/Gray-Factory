@@ -6871,14 +6871,6 @@ class MissionGeneratorWindow(QtWidgets.QMainWindow):
                 f"Произошла ошибка при генерации миссии:\n{str(e)}"
             )
 
-#from pop_file_parser.compiler import PopFileCompiler
-#from pop_file_parser.models.mission import Mission
-#from pop_file_parser.models.wave import Wave
-#from pop_file_parser.models.wave_spawn import WaveSpawn
-#from pop_file_parser.models.tf_bot import TFBot
-#from pop_file_parser.models.tank import Tank
-#from pop_file_parser.models.output_block import OutputBlock
-
 class General(object):
     global WaveManagerGlobal
     global SquadSettingsGlobal
