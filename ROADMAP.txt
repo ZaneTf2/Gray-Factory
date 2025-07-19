@@ -1,5 +1,19 @@
 # Gray Factory Development Roadmap
 
+## Current Priorities
+
+### Pop File Parser Integration
+- Replace current pop file export implementation
+- Integrate https://github.com/ZaneTf2/Pop-file-parser library
+- Add support for pop file importing
+- Implement support class functionality using parser's existing features
+
+### 3D View Improvements
+- Implement proper texture importing
+- Add animation preview support
+- Enable hat models in 3D view
+- Add TF2 model importing via VPK files
+
 ## Version 2.0
 
 ### Interface
