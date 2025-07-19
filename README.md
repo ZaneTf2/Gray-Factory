@@ -14,7 +14,7 @@ A mission editor for Team Fortress 2 Mann vs Machine. Create and edit .pop files
 
 - Python 3.8+
 - PyQt6
-- Pillow
+- Tkinter
 - Team Fortress 2
 
 ## Installation
