@@ -21,7 +21,7 @@ A mission editor for Team Fortress 2 Mann vs Machine. Create and edit .pop files
 
 1. Clone the repository
 2. Install dependencies: `pip install -r requirements.txt`
-3. Run `Gray_Factory.py`
+3. Run `main.py`
 
 ## Contributing
 
