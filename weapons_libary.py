@@ -514,7 +514,7 @@ Weapon_Libary = {
             "The Necro Smasher": {
                 "Name": "The Necro Smasher",
                 "Id": "saxxy",
-                "Icon": "None"
+                "Icon": "Backpack_Necro_Smasher"
             },
             "The Crossing Guard": {
                 "Name": "The Crossing Guard",
@@ -767,7 +767,7 @@ Weapon_Libary = {
             "The Necro Smasher": {
                 "Name": "The Necro Smasher",
                 "Id": "saxxy",
-                "Icon": "None"
+                "Icon": "Backpack_Necro_Smasher"
             },
             "The Crossing Guard": {
                 "Name": "The Crossing Guard",
@@ -1015,7 +1015,7 @@ Weapon_Libary = {
             "The Necro Smasher": {
                 "Name": "The Necro Smasher",
                 "Id": "saxxy",
-                "Icon": "None"
+                "Icon": "Backpack_Necro_Smasher"
             },
             "The Crossing Guard": {
                 "Name": "The Crossing Guard",
@@ -1029,7 +1029,7 @@ Weapon_Libary = {
             "Minigun": {
                 "Name": "Minigun",
                 "Id": "tf_weapon_minigun",
-                "Icon": "None"
+                "Icon": "minigun1"
             },
             "Natascha": {
                 "Name": "Natascha",
@@ -1049,7 +1049,12 @@ Weapon_Libary = {
             "Tomislav": {
                 "Name": "Tomislav",
                 "Id": "tf_weapon_minigun",
-                "Icon": "None"
+                "Icon": "tomislav"
+            },
+            "Australium Tomislav": {
+                "Name": "Australium Tomislav",
+                "Id": "tf_weapon_minigun",
+                "Icon": "tomislav_gold"
             },
             "Festive Minigun": {
                 "Name": "Festive Minigun",
@@ -1059,42 +1064,42 @@ Weapon_Libary = {
             "Silver Botkiller Minigun Mk.I": {
                 "Name": "Silver Botkiller Minigun Mk.I",
                 "Id": "tf_weapon_minigun",
-                "Icon": "None"
+                "Icon": "fob_h_minigun"
             },
             "Gold Botkiller Minigun Mk.I": {
                 "Name": "Gold Botkiller Minigun Mk.I",
                 "Id": "tf_weapon_minigun",
-                "Icon": "None"
+                "Icon": "fob_h_minigun_gold"
             },
             "The Huo-Long Heater": {
                 "Name": "The Huo-Long Heater",
                 "Id": "tf_weapon_minigun",
-                "Icon": "None"
+                "Icon": "Backpack_Huo-Long_Heater"
             },
             "Deflector": {
                 "Name": "Deflector",
                 "Id": "tf_weapon_minigun",
-                "Icon": "None"
+                "Icon": "minigun1"
             },
             "Rust Botkiller Minigun Mk.I": {
                 "Name": "Rust Botkiller Minigun Mk.I",
                 "Id": "tf_weapon_minigun",
-                "Icon": "None"
+                "Icon": "minigun_rust"
             },
             "Blood Botkiller Minigun Mk.I": {
                 "Name": "Blood Botkiller Minigun Mk.I",
                 "Id": "tf_weapon_minigun",
-                "Icon": "None"
+                "Icon": "minigun_blood"
             },
             "Carbonado Botkiller Minigun Mk.I": {
                 "Name": "Carbonado Botkiller Minigun Mk.I",
                 "Id": "tf_weapon_minigun",
-                "Icon": "None"
+                "Icon": "minigun_diamond_black"
             },
             "Diamond Botkiller Minigun Mk.I": {
                 "Name": "Diamond Botkiller Minigun Mk.I",
                 "Id": "tf_weapon_minigun",
-                "Icon": "None"
+                "Icon": "minigun_diamond"
             },
             "Silver Botkiller Minigun Mk.II": {
                 "Name": "Silver Botkiller Minigun Mk.II",
@@ -1116,7 +1121,7 @@ Weapon_Libary = {
             "Sandvich": {
                 "Name": "Sandvich",
                 "Id": "tf_weapon_lunchbox",
-                "Icon": "robo_sandwich"
+                "Icon": "sandwich"
             },
             "The Dalokohs Bar": {
                 "Name": "The Dalokohs Bar",
@@ -1168,7 +1173,7 @@ Weapon_Libary = {
             "Fists": {
                 "Name": "Fists",
                 "Id": "tf_weapon_fists",
-                "Icon": "None"
+                "Icon": "Backpack_Fists"
             },
             "The Killing Gloves of Boxing": {
                 "Name": "The Killing Gloves of Boxing",
@@ -1193,7 +1198,7 @@ Weapon_Libary = {
             "Fists of Steel": {
                 "Name": "Fists of Steel",
                 "Id": "tf_weapon_fists",
-                "Icon": "None"
+                "Icon": "Backpack_Fists_of_Steel"
             },
             "Saxxy": {
                 "Name": "Saxxy",
@@ -1258,7 +1263,7 @@ Weapon_Libary = {
             "The Necro Smasher": {
                 "Name": "The Necro Smasher",
                 "Id": "saxxy",
-                "Icon": "None"
+                "Icon": "Backpack_Necro_Smasher"
             },
             "The Crossing Guard": {
                 "Name": "The Crossing Guard",
@@ -1511,7 +1516,7 @@ Weapon_Libary = {
             "The Necro Smasher": {
                 "Name": "The Necro Smasher",
                 "Id": "saxxy",
-                "Icon": "None"
+                "Icon": "Backpack_Necro_Smasher"
             },
         },
         "PDA": {
@@ -1696,7 +1701,7 @@ Weapon_Libary = {
             "The Necro Smasher": {
                 "Name": "The Necro Smasher",
                 "Id": "saxxy",
-                "Icon": "None"
+                "Icon": "Backpack_Necro_Smasher"
             },
             "The Crossing Guard": {
                 "Name": "The Crossing Guard",
@@ -1924,7 +1929,7 @@ Weapon_Libary = {
             "The Necro Smasher": {
                 "Name": "The Necro Smasher",
                 "Id": "saxxy",
-                "Icon": "None"
+                "Icon": "Backpack_Necro_Smasher"
             },
             "The Crossing Guard": {
                 "Name": "The Crossing Guard",

@@ -2927,6 +2927,7 @@ class Mercenary(object):
             
             "CharacterAttributes" : {},
             "Atributes" : dict(default_stat.Mercenary[toClass].get("Atributes", [])),
+            "Attributes" : default_stat.Mercenary[toClass].get("Attributes", []),
             "Custom Parametrs" : default_stat.Mercenary[toClass].get("Custom Parametrs"),
             
             "Squad" : self.SquadName,
@@ -2971,6 +2972,7 @@ class Mercenary(object):
             
             "CharacterAttributes" : list["CharacterAttributes"],
             "Atributes" : list["Atributes"],
+            "Attributes" : list["Attributes"] if "Attributes" in list else [],
             "Custom Parametrs" : list["Custom Parametrs"],
             
             "Squad" : list["Squad"], 
@@ -3012,6 +3014,7 @@ class Mercenary(object):
             "Melee":               Melee,
             "CharacterAttributes": list.get("CharacterAttributes", {}),
             "Atributes":           list.get("Atributes"),
+            "Attributes":          list.get("Attributes", []),
             "Custom Parametrs":    list.get("Custom Parametrs"),
             "Squad":               list.get("Squad"),
             "power":               list.get("power"),
@@ -3128,24 +3131,23 @@ class Mercenary(object):
             for item in _template["Items"]:
                 item_title = item.title()
                 
-                if item_title in cosmetic_libary.Cosmetic:
-                    cosmeticslist.append(cosmetic_libary.Cosmetic[item_title])
+                weapon_find = weapons_libary.find_weapon_info(item_title)
+                if weapon_find != None:
+                    weapon_data = WeaponData(
+                        Class=weapon_find["Class"],
+                        WeaponType=weapon_find["Type"],
+                        weaponName=weapon_find["Name"],
+                        attrubutes=self.process_item_attributes(_template)
+                    )
+                    if weapon_find["Type"] == "Primary":
+                        Primary = weapon_data
+                    elif weapon_find["Type"] == "Secondary":
+                        Secondary = weapon_data
+                    elif weapon_find["Type"] == "Melee":
+                        Melee = weapon_data
                 
-                else:
-                    weapon_find = weapons_libary.find_weapon_info(item_title)
-                    if weapon_find != None:
-                        weapon_data = WeaponData(
-                            Class=weapon_find["Class"],
-                            WeaponType=weapon_find["Type"],
-                            weaponName=weapon_find["Name"],
-                            attrubutes=self.process_item_attributes(_template)
-                        )
-                        if weapon_find["Type"] == "Primary":
-                            Primary = weapon_data
-                        elif weapon_find["Type"] == "Secondary":
-                            Secondary = weapon_data
-                        elif weapon_find["Type"] == "Melee":
-                            Melee = weapon_data
+                elif item_title in cosmetic_libary.Cosmetic:
+                    cosmeticslist.append(cosmetic_libary.Cosmetic[item_title])
                             
         cosmeticslist += cosmetics
         
@@ -3185,6 +3187,7 @@ class Mercenary(object):
             
             "CharacterAttributes" : atrbutes,
             "Atributes" : _template.get("Attributes", []),
+            "Attributes" : _template.get("Attributes", []),
             "Custom Parametrs" : """""",
 
             "Squad" : self.SquadName,
@@ -3231,6 +3234,7 @@ class Mercenary(object):
             
             "CharacterAttributes" : {},
             "Atributes" : default_stat.Mercenary[toClass].get("Atributes", []),
+            "Attributes" : default_stat.Mercenary[toClass].get("Attributes", []),
             "Custom Parametrs" : default_stat.Mercenary[toClass].get("Custom Parametrs"),
 
             "Squad" : self.SquadName, 
@@ -3870,16 +3874,17 @@ class Atributes:
         self.GroupBox.close()
 
 class AtributeUI(QtWidgets.QMainWindow):
+    global Mercenary_now
     def __init__(self):
         super().__init__()
         self.buttonList : QtWidgets.QPushButton = []
+        self.current_attribute = []
         self.setupUi()
 
     def Show(self):
-        global Mercenary_now
         if Mercenary_now is None:
             return
-        stat = Mercenary_now.stat["Atributes"]
+        stat = Mercenary_now.stat["Attributes"]
         for item in self.buttonList:
             item.setChecked(False)
             if item.text() in stat:
@@ -3890,25 +3895,26 @@ class AtributeUI(QtWidgets.QMainWindow):
             if item.text().lower() in _tag:
                 item.setChecked(True)
                 
+        self.current_attribute = list(Mercenary_now.stat["Attributes"])
         self.show()
 
     def Close(self):
+        self.current_attribute.clear()
         self.close()
         
     def SaveStat(self):
-        global Mercenary_now
-        Mercenary_now.save()        
+        Mercenary_now.stat["Attributes"] = self.current_attribute
+        Mercenary_now.save()
+
         self.close()
 
     def AddRemoveAtribute(self, nameAtr, active):
-        global Mercenary_now
-
-        statMercenary = list(Mercenary_now.stat["Atributes"])
-        if active and nameAtr not in statMercenary:
-            statMercenary.append(nameAtr)
-        elif active == False and nameAtr in statMercenary:
-            indx = statMercenary.index(nameAtr)
-            statMercenary.pop(indx)
+        if active and nameAtr not in self.current_attribute:
+            self.current_attribute.append(nameAtr)
+            
+        elif active == False and nameAtr in self.current_attribute:
+            indx = self.current_attribute.index(nameAtr)
+            self.current_attribute.pop(indx)
         
     def setupUi(self):
         self.setObjectName("AtributeUI")
