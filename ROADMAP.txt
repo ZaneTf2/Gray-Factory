@@ -1,0 +1,49 @@
+# Gray Factory Development Roadmap
+
+## Current Priorities
+
+### Pop File Parser Integration
+- Replace current pop file export implementation
+- Integrate https://github.com/ZaneTf2/Pop-file-parser library
+- Add support for pop file importing
+- Implement support class functionality using parser's existing features
+
+### 3D View Improvements
+- Implement proper texture importing
+- Add animation preview support
+- Enable hat models in 3D view
+- Add TF2 model importing via VPK files
+
+## Version 2.0
+
+### Interface
+- UI redesign with new features
+- Modular architecture for easy expansion
+- Improved navigation between components
+
+### Localization
+- Multi-language support
+- Interface translation system
+- Documentation localization
+
+### User Editing
+- Built-in .pop file text editor
+- Direct robot and logic editing
+- Advanced settings for experienced users
+
+## Online Platform
+
+### Mission Browser
+- Steam/Google authentication integration
+- Search by tags, difficulty, rating
+- Sort by date and popularity
+
+### Social Features
+- Mission comments
+- Rating and evaluation system
+- Community revisions
+
+### Integration
+- "Open in Program" button
+- Direct mission import to editor
+- Local and online version sync
